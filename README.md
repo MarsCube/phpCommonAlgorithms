@@ -12,3 +12,16 @@ php ^7.2
 
 如果有bug，请反馈
 
+#### 新增composer
+```
+composer require zx/php-common-algorithms
+
+
+use ZX\Algorithm\GlobalUniqueId;
+
+$r1 = GlobalUniqueId::CreateBasicsUid(1, 1);
+$r2 = GlobalUniqueId::CreateBasicsUid(1, 2);
+
+p($r1);
+p($r2);
+```
