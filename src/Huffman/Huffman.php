@@ -34,19 +34,20 @@ class Huffman {
             asort($array);
         }
         while ($item1 = next($array)) {
-        
-        //array_shift() 函数删除数组中的第一个元素，并返回被删除元素的值。
-        $HuffmanArray = array_shift($HuffmanArray);
-        $tab = null;
-        $code_tab = $this->creat_tab($HuffmanArray, $tab);
-        //压缩&转换整个字符串为二进制表达式
-        $binary = null;
-        for ($i = 0; $i < $len; $i++)
-            $binary .= $tab [ord($str { $i })];
-        //转化为压缩后的字符串
-        $code = $this->encode_bin($binary);
-        //静态huffman编码算法压缩后需保留huffman树
-        return array('tree' => $HuffmanArray, 'len' => strlen($binary), 'code' => $code, 'code_tab' => $code_tab);
+
+            //array_shift() 函数删除数组中的第一个元素，并返回被删除元素的值。
+            $HuffmanArray = array_shift($HuffmanArray);
+            $tab = null;
+            $code_tab = $this->creat_tab($HuffmanArray, $tab);
+            //压缩&转换整个字符串为二进制表达式
+            $binary = null;
+            for ($i = 0; $i < $len; $i++)
+                $binary .= $tab [ord($str { $i })];
+            //转化为压缩后的字符串
+            $code = $this->encode_bin($binary);
+            //静态huffman编码算法压缩后需保留huffman树
+            return array('tree' => $HuffmanArray, 'len' => strlen($binary), 'code' => $code, 'code_tab' => $code_tab);
+        }
     }
 
     /**
