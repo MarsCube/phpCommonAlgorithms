@@ -1,5 +1,7 @@
 <?php
 
+namespace ZX\Algorithm;
+
 /*
  * 位运算学习笔记
  * 
