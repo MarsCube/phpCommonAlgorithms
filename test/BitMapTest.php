@@ -23,7 +23,7 @@ if ($rr) {
 ////海量数据测试，php8 的jit效果更好
 //ini_set('memory_limit', '4096M');
 ////2000两千万数据
-//for ($index = 0; $index < 100000000; $index = $index + 5) {
+//for ($index = 0; $index < 1000000000; $index = $index + 5) {
 //    BitMap::addValue($index);
 //}
 //$rr = BitMap::exits(25);
@@ -32,5 +32,5 @@ if ($rr) {
 //} else {
 //    p('no');
 //}
-
+//echo "内存使用峰值:",(((memory_get_peak_usage())/1024/1024).'MB'),PHP_EOL;
 
