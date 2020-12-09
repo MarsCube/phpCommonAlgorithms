@@ -1,5 +1,7 @@
 <?php
 
+namespace ZX\Algorithm;
+
 /*
  * 布隆过滤算法
  */
